@@ -121,13 +121,17 @@
             if (!string.IsNullOrEmpty(newGuess)) 
             {
                 Guess guess = new Guess(newGuess);
+
+                // if the player still has attempts left, evaluate their guess, otherwise display loss message
                 if (attempts < 5) {
                     guess.GetGuessStatuses(answer);
+
+                    // check if the player guessed correctly, display win message if true
                     if (guess.IsWinningGuess(answer)) {
-                        // modal popup: You won! / add Play again button to restart / refresh the game
                         showModal = true;
                         gameStatusMessage = "You Won!";
                     }
+                    // if the player did not guess correctly, increment the attempt #
                     else {
                         attempts++;
                     }
@@ -135,13 +139,15 @@
                 else {
                     guess.GetGuessStatuses(answer);
 
-                    // modal popup: You lost! / add Try again button to restart / refresh the game
                     showModal = true;
                     gameStatusMessage = "You Lost!";
                 }
 
-                guesses.Add(guess); // add current guess to the player's list of guesses
-                newGuess = string.Empty; // clear the input box
+                // add current guess to the player's list of guesses
+                guesses.Add(guess); 
+
+                // clear the input box
+                newGuess = string.Empty; 
             }
         }
     } 
