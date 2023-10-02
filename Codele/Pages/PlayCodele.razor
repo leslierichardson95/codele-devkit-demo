@@ -33,7 +33,7 @@
 
 <!-- input box for the player to type and submit a guess -->
 <input placeholder="Type your guess" @bind="newGuess" />
-<button @onclick="SubmitGuess">Submit</button>
+<button>Submit</button>
 
 <!-- display message if guess is not 5 characters long -->
 @if (displayGuessSizeMsg == true) {
@@ -50,10 +50,10 @@
                     <h4 class="modal-title">@gameStatusMessage</h4>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Correct Answer: </strong> @answer</p>
+                    <p><strong>Correct Answer: </strong> @correctGuess</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" @onclick="StartNewGame">New Game?</button>
+                    <button type="button" class="btn btn-success">New Game?</button>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
     private string[]? answers;
 
     // the answer for the current game
-    private string? answer;
+    private string? correctGuess;
 
     // # of tries the player has to guess the word
     private int attempts;
@@ -93,63 +93,12 @@
         attempts = 1;
         answers = await Http.GetFromJsonAsync<string[]>("sample-data/codele-word-library.json");
         Random randomGenerator = new Random();
-        answer = answers[randomGenerator.Next(0, answers.Length)];
-    }
-
-    // use as Copilot example
-    // Reset and start a new game
-    private void StartNewGame() {
-        showModal = false;
-        guesses.Clear();
-        newGuess = string.Empty;
-        attempts = 1;
-        Random randomGenerator = new Random();
-        answer = answers[randomGenerator.Next(0, answers.Length)];
+        correctGuess = answers[randomGenerator.Next(0, answers.Length)];
     }
 
     // Close the game status modal
     private void ModalClose() {
         showModal = false;
-    }
-    
-    // Submit and evaluate the player's guess
-    private void SubmitGuess() {
-        // check if guess is 5 characters long, display message if not
-        if (newGuess.Length != 5) displayGuessSizeMsg = true;
-        else {
-            displayGuessSizeMsg = false;
-            if (!string.IsNullOrEmpty(newGuess)) 
-            {
-                Guess guess = new Guess(newGuess);
-
-                // if the player still has attempts left, evaluate their guess, otherwise display loss message
-                if (attempts < 5) {
-                    guess.GetGuessStatuses(answer);
-
-                    // check if the player guessed correctly, display win message if true
-                    if (guess.IsWinningGuess(answer)) {
-                        showModal = true;
-                        gameStatusMessage = "You Won!";
-                    }
-                    // if the player did not guess correctly, increment the attempt #
-                    else {
-                        attempts++;
-                    }
-                }
-                else {
-                    guess.GetGuessStatuses(answer);
-
-                    showModal = true;
-                    gameStatusMessage = "You Lost!";
-                }
-
-                // add current guess to the player's list of guesses
-                guesses.Add(guess); 
-
-                // clear the input box
-                newGuess = string.Empty; 
-            }
-        }
     } 
 }
 
