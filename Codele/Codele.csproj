@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CodeleLogic\CodeleLogic.csproj" />
+    <ProjectReference Include="..\CodeleLogic\CodeleLogic.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codele", "Codele\Codele.csproj", "{65D36224-59C2-4612-A624-5E5A8F30308D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeleLogic", "..\CodeleLogic\CodeleLogic.csproj", "{58281448-113C-44D1-B9A8-4F7F2213E15D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeleLogic", "CodeleLogic\CodeleLogic.csproj", "{8863B040-7DF3-49E9-85E3-C2531ADF0C63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{65D36224-59C2-4612-A624-5E5A8F30308D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65D36224-59C2-4612-A624-5E5A8F30308D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65D36224-59C2-4612-A624-5E5A8F30308D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58281448-113C-44D1-B9A8-4F7F2213E15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58281448-113C-44D1-B9A8-4F7F2213E15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58281448-113C-44D1-B9A8-4F7F2213E15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58281448-113C-44D1-B9A8-4F7F2213E15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8863B040-7DF3-49E9-85E3-C2531ADF0C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8863B040-7DF3-49E9-85E3-C2531ADF0C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8863B040-7DF3-49E9-85E3-C2531ADF0C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8863B040-7DF3-49E9-85E3-C2531ADF0C63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
