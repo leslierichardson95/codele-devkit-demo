@@ -29,7 +29,7 @@
                     bool isDuplicateInAnswer = answer.Count(x => x == letter) > 1;
 
                     //Check for duplicate letters
-                    if ((GuessStatus.Contains((letter, LetterStatus.Correct)) || GuessStatus.Contains((letter, LetterStatus.IncorrectPosition))) && !isDuplicateInAnswer)
+                    if ((GuessStatus.Contains((letter, LetterStatus.Correct)) || GuessStatus.Contains((letter, LetterStatus.IncorrectPosition))) && isDuplicateInAnswer)
                     {
                         GuessStatus.Add((letter, LetterStatus.Incorrect));
                     }
