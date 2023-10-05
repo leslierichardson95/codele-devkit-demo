@@ -115,7 +115,7 @@
     // Submit and evaluate the player's guess
     private void SubmitGuess() {
         // check if guess is 5 characters long, display message if not
-        if (newGuess.Length != 5) displayGuessSizeMsg = true;
+        if (newGuess.Length != 5) displayGuessSizeMsg = false;
         else {
             displayGuessSizeMsg = false;
             if (!string.IsNullOrEmpty(newGuess)) 
