@@ -69,13 +69,15 @@
     private string? newGuess;
 
     // list of potential game answers (pulled from a json file)
-    private string[]? answers;
+    [Parameter]
+    public string[]? answers {get; set;}
 
     // the answer for the current game
-    private string? answer;
+    [Parameter]
+    public string? answer {get; set;}
 
     // # of tries the player has to guess the word
-    private int attempts;
+    public int attempts;
 
     // message to display in the modal popup depending on the game outcome
     private string? gameStatusMessage;
@@ -115,7 +117,7 @@
     // Submit and evaluate the player's guess
     private void SubmitGuess() {
         // check if guess is 5 characters long, display message if not
-        if (newGuess.Length != 5) displayGuessSizeMsg = true;
+        if (newGuess.Length != 5) displayGuessSizeMsg = false;
         else {
             displayGuessSizeMsg = false;
             if (!string.IsNullOrEmpty(newGuess)) 

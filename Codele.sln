@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codele", "Codele\Codele.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeleLogic", "CodeleLogic\CodeleLogic.csproj", "{A77EC610-941F-4C7C-A3FC-97A9A29266BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeleTests", "CodeleTests\CodeleTests.csproj", "{AC895664-71A2-45DE-913C-65BA3C222093}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A77EC610-941F-4C7C-A3FC-97A9A29266BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A77EC610-941F-4C7C-A3FC-97A9A29266BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A77EC610-941F-4C7C-A3FC-97A9A29266BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC895664-71A2-45DE-913C-65BA3C222093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC895664-71A2-45DE-913C-65BA3C222093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC895664-71A2-45DE-913C-65BA3C222093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC895664-71A2-45DE-913C-65BA3C222093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
