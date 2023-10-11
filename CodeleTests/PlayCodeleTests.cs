@@ -26,7 +26,7 @@ public class PlayCodeleTests : BunitTestContext
         var mock = Services.AddMockHttpClient();
         string[] answers = new string[2]{ "hello", "world" };
         mock.When("sample-data/codele-word-library.json").RespondJson(answers);
-		var cut = RenderComponent<PlayCodele>(parameters => parameters.Add(p => p.answers, answers).Add(p => p.answer, "hello"));
+		var cut = RenderComponent<PlayCodele>(parameters => parameters.Add(p => p.answers, answers).Add(p => p.answer, "world"));
         
         cut.Find("input").Change("hello");
 
